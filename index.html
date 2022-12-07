@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>FORM VALIDATION </title>
+	<style>
+	table,td
+	{
+	border:2px solid rgba(8, 169, 238, 0.7);
+	}
+    table{
+        color: aqua;
+    }
+	</style>
+	<script>
+	function validate()
+	{
+	     
+		var user=document.form1.user.value;
+		var email=document.form1.email.value;
+		var pass=document.form1.pass.value;
+		var contact=document.form1.contact.value;
+		var confirm=document.form1.cpass.value;
+		var gender=document.form1.gender.value;
+		var check=document.form1.check1.checked;
+		
+		if(user==""||email==""||pass==""||contact==""||confirm=="" ||gender=="" ||check==false)
+		{
+			alert("kindly fill complete form");
+			return false;
+		}
+		else if( contact.length<10 || contact.length>10)
+		{
+		  alert("enter 10 digit number");
+		  return false;
+		 }
+		 else if(pass.length<6)
+		 {
+		 alert("password atleast 6 character");
+		 return false;
+		 }
+		 else if(pass!=confirm)
+		 {
+		 alert("password not match with confirm password");
+		 return false;
+		 }
+		 
+	
+	}
+	</script>
+    <body background="C:\Users\HP\OneDrive\Desktop\html in lpu\pep2.WEBP"class="logo"></body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Landing Page Design Using HTML & CSS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            
+            <nav>
+                <ol type="A">
+                    <li><a href="https://www.google.com.in">Home </a></li>
+                    <li><a href="https://instapage.com">Prouducts</a></li>
+                    <li><a href="https://www.unbounce.com">Community</a></li>
+                    <li><a href="https://zapier.com">Contact</a></li>
+                    
+                </ol>
+            </nav>
+            <button class="btn" id="btn1">Log In</button>
+            <button class="btn" id="btn2">Sign Up</button>
+        </div> 
+    <form action="welcome.html" method="get" name="form1" onsubmit="return validate()">
+        <center>
+        <table>
+        <tr>
+            <td colspan="2"><center>Registration Form</center></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="user" name="user"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Contact</td>
+            <td><input type="tel" id="contact" name="contact"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" id="pass" name="pass"></td>
+        </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td><input type="password" id="cpass" name="cpass"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender">male
+            <input type="radio" name="gender">female
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="checkbox" id="check" name="check1"> I accept
+            </td>
+        </tr>
+        <tr >
+            
+            <td colspan="2" ><center><input type="submit" value="submit" style=color:aqua; ><input type="reset" value="reset" style=color:aqua;></center></td>
+        </tr>
+        </table>
+        
+        </center>
+        </form>
+    
+        <div class="content">
+            <div class="text">
+           <h1 style="text-align:justify;">Be Young, Have Fun,<br><span>Drink Pepsi</span></h1>
+            <p style=text-align:justify;>Pepsi is a carbonated soft drink manufactured by PepsiCo. Originally created and developed in 1893 by Caleb Bradham and introduced as Brad's Drink, it was renamed as Pepsi-Cola in 1898, and then shortened to Pepsi in 1961.
+            </p>
+            <button class="btn3">Buy Now</button>
+           </div>
+        <div class="pepsi">
+        <img src=alt="">
+        </div>
+       </div>
+   </div>
+</body>
+</html>
+ 
